@@ -1,15 +1,17 @@
 
+import Image from "next/image";
 import React from "react";
-import Pill from "./Pill";
+import Pill from "../../components/Pill";
 
 interface CardProps {
   title: string;
+  location: string;
 }
 
 const Card: React.FC<CardProps> = ({ title }) => {
   return (
     <div className="h-[422px] w-[378.56px] cursor-pointer hover:shadow-md hover:rounded-lg ">
-      <img className="rounded-lg" src="/assets/house.png" width={378.56} height={299.37} alt="house image" />
+     <img className="rounded-lg" src="/assets/house.png" width={378.56} height={299.37} alt="house image" />
       <div className="p-2 flex gap-2 mt-2">
         <Pill title="Top Villa" />
         <Pill title="Self CheckIn" />
